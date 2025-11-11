@@ -1,73 +1,36 @@
 <script lang="ts">
-  import { ListOutline } from 'flowbite-svelte-icons';
+  import PageBreadcrumb from '$lib/components/common/PageBreadCrumb.svelte';
+  import DefaultInputs from '$lib/components/form/form-elements/DefaultInputs.svelte';
+  import InputGroup from '$lib/components/form/form-elements/InputGroup.svelte';
+  import DropzoneComponent from '$lib/components/form/form-elements/DropzoneComponent.svelte';
+  import CheckboxComponents from '$lib/components/form/form-elements/CheckboxComponents.svelte';
+  import RadioButtons from '$lib/components/form/form-elements/RadioButtons.svelte';
+  import ToggleSwitch from '$lib/components/form/form-elements/ToggleSwitch.svelte';
+  import FileInputExample from '$lib/components/form/form-elements/FileInputExample.svelte';
+  import SelectInputs from '$lib/components/form/form-elements/SelectInputs.svelte';
+  import TextAreaInput from '$lib/components/form/form-elements/TextAreaInput.svelte';
+  import InputStates from '$lib/components/form/form-elements/InputStates.svelte';
+  import PageMeta from '$lib/components/common/PageMeta.svelte';
 </script>
 
-<div class="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] md:p-6">
-  <div class="flex items-center gap-3 mb-6">
-    <ListOutline class="size-8 text-gray-800 dark:text-white" />
-    <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Form Elements</h1>
+<PageMeta
+  title="SvelteKit Form Elements Dashboard | TailAdmin - SvelteKit Admin Dashboard Template"
+  description="This is SvelteKit Form Elements Dashboard page for TailAdmin - SvelteKit Tailwind CSS Admin Dashboard Template"
+/>
+<PageBreadcrumb pageTitle="Form Elements" />
+<div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+  <div class="space-y-6">
+    <DefaultInputs />
+    <SelectInputs />
+    <TextAreaInput />
+    <InputStates />
   </div>
-  
-  <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-    <div>
-      <h2 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Input Fields</h2>
-      
-      <div class="space-y-4">
-        <div>
-          <label for="text-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Text Input</label>
-          <input 
-            id="text-input"
-            type="text" 
-            placeholder="Enter text" 
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-brand-500 focus:ring-brand-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-          />
-        </div>
-        
-        <div>
-          <label for="email-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Input</label>
-          <input 
-            id="email-input"
-            type="email" 
-            placeholder="Enter email" 
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-brand-500 focus:ring-brand-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-          />
-        </div>
-        
-        <div>
-          <label for="password-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Password Input</label>
-          <input 
-            id="password-input"
-            type="password" 
-            placeholder="Enter password" 
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-brand-500 focus:ring-brand-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-          />
-        </div>
-      </div>
-    </div>
-    
-    <div>
-      <h2 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Select and Textarea</h2>
-      
-      <div class="space-y-4">
-        <div>
-          <label for="select-option" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Select Option</label>
-          <select id="select-option" class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-brand-500 focus:ring-brand-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white">
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
-        </div>
-        
-        <div>
-          <label for="textarea" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Textarea</label>
-          <textarea 
-            id="textarea"
-            rows="4" 
-            placeholder="Enter your message" 
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-brand-500 focus:ring-brand-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-          ></textarea>
-        </div>
-      </div>
-    </div>
+  <div class="space-y-6">
+    <InputGroup />
+    <FileInputExample />
+    <CheckboxComponents />
+    <RadioButtons />
+    <ToggleSwitch />
+    <DropzoneComponent />
   </div>
 </div>

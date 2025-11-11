@@ -1,22 +1,17 @@
 <script lang="ts">
-  import Table from '$lib/components/Table.svelte';
-  import { InsertTableOutline } from 'flowbite-svelte-icons';
-  
-  const columns = [
-    { key: 'name', label: 'Name' },
-    { key: 'title', label: 'Title' },
-    { key: 'email', label: 'Email' },
-    { key: 'role', label: 'Role' }
-  ];
-  
-  const data = [
-    { name: 'John Doe', title: 'Software Engineer', email: 'john.doe@example.com', role: 'Admin' },
-    { name: 'Jane Smith', title: 'Product Manager', email: 'jane.smith@example.com', role: 'Editor' },
-    { name: 'Robert Johnson', title: 'Designer', email: 'robert.johnson@example.com', role: 'Viewer' },
-    { name: 'Emily Davis', title: 'Data Analyst', email: 'emily.davis@example.com', role: 'Editor' },
-    { name: 'Michael Wilson', title: 'DevOps Engineer', email: 'michael.wilson@example.com', role: 'Admin' },
-    { name: 'Sarah Brown', title: 'QA Engineer', email: 'sarah.brown@example.com', role: 'Viewer' }
-  ];
+  import PageBreadcrumb from '$lib/components/common/PageBreadCrumb.svelte';
+  import ComponentCard from '$lib/components/common/ComponentCard.svelte';
+  import PageMeta from '$lib/components/common/PageMeta.svelte';
+  import BasicTableOne from '$lib/components/tables/BasicTables/BasicTableOne.svelte';
 </script>
 
-<Table {columns} {data} title="Basic Tables" sortable />
+<PageMeta
+  title="SvelteKit Basic Tables Dashboard | TailAdmin - SvelteKit Admin Dashboard Template"
+  description="This is SvelteKit Basic Tables Dashboard page for TailAdmin - SvelteKit Tailwind CSS Admin Dashboard Template"
+/>
+<PageBreadcrumb pageTitle="Basic Tables" />
+<div class="space-y-6">
+  <ComponentCard title="Basic Table 1">
+    <BasicTableOne />
+  </ComponentCard>
+</div>

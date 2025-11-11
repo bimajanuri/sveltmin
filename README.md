@@ -1,143 +1,110 @@
-# Sveltmin - Konversi TailAdmin React ke SvelteKit
+# TailAdmin SvelteKit - Free SvelteKit Tailwind Admin Dashboard Template
 
-Proyek ini adalah hasil konversi dashboard admin TailAdmin dari React ke SvelteKit dengan mempertahankan fungsionalitas, struktur, dan desain UI/UX yang identik.
+TailAdmin adalah template dashboard admin gratis dan open-source yang dibangun di atas **SvelteKit dan Tailwind CSS**, menyediakan developer dengan semua yang mereka butuhkan untuk membuat solusi back-end, dashboard, atau admin panel yang kaya akan fitur untuk proyek web mendatang.
 
-## Struktur Proyek
+Dengan TailAdmin, Anda mendapatkan akses ke semua komponen UI dashboard, elemen, dan halaman yang diperlukan untuk membangun dashboard atau admin panel yang kaya akan fitur dan lengkap. Baik Anda membangun dashboard atau admin panel untuk aplikasi web kompleks atau website sederhana, TailAdmin adalah solusi yang tepat untuk membantu Anda cepat memulai pengembangan.
 
+![TailAdmin SvelteKit Dashboard Preview](./banner.png)
+
+## Overview
+
+TailAdmin menyediakan komponen UI dan layout penting untuk membangun dashboard admin berbasis web menggunakan SvelteKit dan Tailwind CSS. Template ini dibangun dengan:
+
+- SvelteKit 2.x
+- TypeScript
+- Tailwind CSS v4
+
+### Quick Links
+
+- [✨ Kunjungi Website](https://tailadmin.com)
+- [📄 Dokumentasi](https://tailadmin.com/docs)
+- [⬇️ Download](https://tailadmin.com/download)
+- [🖌️ File Desain Figma (Edisi Komunitas)](https://www.figma.com/community/file/1214477970819985778)
+- [⚡ Dapatkan Versi PRO](https://tailadmin.com/pricing)
+
+### Demo
+
+- [Versi Free](https://free-sveltekit-demo.tailadmin.com/)
+
+### Versi Lain
+
+- [HTML Version](https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template)
+- [React Version](https://github.com/TailAdmin/free-react-tailwind-admin-dashboard)
+- [Next.js Version](https://github.com/TailAdmin/free-nextjs-admin-dashboard)
+- [Vue.js Version](https://github.com/TailAdmin/vue-tailwind-admin-dashboard)
+
+## Instalasi
+
+### Prasyarat
+
+Untuk memulai dengan TailAdmin, pastikan Anda memiliki prasyarat berikut terinstal dan disiapkan:
+
+- Node.js 18.x atau lebih baru (disarankan menggunakan Node.js 20.x atau lebih baru)
+
+### Mengkloning Repository
+
+Klon repository menggunakan perintah berikut:
+
+```bash
+git clone [url-repository-anda]
 ```
-src/
-├── routes/
-│   ├── +layout.svelte                 # Layout utama dengan sidebar dan header
-│   ├── +page.svelte                   # Halaman dashboard utama
-│   ├── calendar/
-│   │   └── +page.svelte               # Halaman calendar
-│   ├── profile/
-│   │   └── +page.svelte               # Halaman user profile
-│   ├── form-elements/
-│   │   └── +page.svelte               # Halaman form elements
-│   ├── basic-tables/
-│   │   └── +page.svelte               # Halaman basic tables
-│   ├── blank/
-│   │   └── +page.svelte               # Halaman blank
-│   ├── error-404/
-│   │   └── +page.svelte               # Halaman error 404
-│   ├── line-chart/
-│   │   └── +page.svelte               # Halaman line chart
-│   └── ... (rute lainnya)
-├── lib/
-│   └── components/
-│       ├── Sidebar.svelte             # Komponen sidebar
-│       ├── Header.svelte              # Komponen header
-│       ├── Chart.svelte               # Komponen chart
-│       └── Table.svelte               # Komponen tabel
-├── app.css                            # Styling dengan Tailwind CSS
-├── app.d.ts                           # Type definitions
-└── app.html                           # HTML template
-static/
-├── images/
-│   └── logo/                          # Logo assets dari TailAdmin
-docs/
-├── icon-mapping.md                    # Mapping icon dari Hero Icons ke Flowbite Svelte Icons
-├── routing-structure.md               # Struktur routing yang direncanakan
-└── implementation-summary.md          # Ringkasan implementasi
-```
 
-## Komponen Utama
+> Pengguna Windows: tempatkan repository dekat dengan root drive Anda jika menghadapi masalah saat mengkloning.
 
-### Sidebar.svelte
-Komponen sidebar yang dikonversi dari `AppSidebar.tsx` di TailAdmin React:
-- Mendukung mode expanded dan collapsed
-- Responsive untuk mobile dan desktop
-- Menu navigasi dengan submenu yang dapat diperluas
-- Menampilkan logo dengan ukuran yang berbeda tergantung mode
-- Menggunakan Flowbite Svelte Icons
+1. Instal dependensi:
 
-### Header.svelte
-Komponen header yang dikonversi dari `AppHeader.tsx` di TailAdmin React:
-- Tombol toggle untuk sidebar
-- Search form dengan shortcut keyboard
-- Dropdown notifikasi
-- Menu pengguna
-- Toggle tema gelap/terang
-- Menggunakan Flowbite Svelte Icons
-
-### +page.svelte (Dashboard)
-Halaman dashboard utama dengan:
-- Card metrik (Customers dan Orders) menggunakan Flowbite Svelte Icons
-- Komponen chart sederhana untuk visualisasi
-- Tabel data yang dapat disortir
-- Card demografi pengguna
-
-### Komponen Tambahan
-- `Chart.svelte` - Komponen chart sederhana untuk visualisasi data
-- `Table.svelte` - Komponen tabel yang dapat disortir
-
-## Desain dan Styling
-
-Proyek ini menggunakan:
-- Tailwind CSS v4 untuk styling
-- Font Inter dari Google Fonts
-- Flowbite Svelte dan Flowbite Svelte Icons untuk komponen UI
-- Sistem warna dan kelas utilitas dari TailAdmin
-
-## Mapping Icon
-
-Lihat [docs/icon-mapping.md](docs/icon-mapping.md) untuk daftar lengkap mapping icon dari Hero Icons (digunakan di TailAdmin React) ke Flowbite Svelte Icons.
-
-## Cara Menjalankan
-
-1. Install dependensi:
    ```bash
    npm install
+   # atau
+   yarn install
    ```
 
-2. Jalankan dalam mode development:
+   > Gunakan flag `--legacy-peer-deps`, jika Anda menghadapi masalah saat instalasi.
+
+2. Mulai server pengembangan:
    ```bash
    npm run dev
+   # atau
+   yarn dev
    ```
 
-3. Bangun untuk produksi:
-   ```bash
-   npm run build
-   ```
+## Komponen
 
-4. Preview build produksi:
-   ```bash
-   npm run preview
-   ```
+TailAdmin adalah titik awal yang telah dirancang sebelumnya untuk membangun dashboard berbasis web menggunakan SvelteKit dan Tailwind CSS. Template ini mencakup:
 
-## Kemajuan Implementasi
+- Sidebar yang canggih dan dapat diakses
+- Komponen visualisasi data
+- Halaman manajemen profil dan halaman 404 yang telah dibuat sebelumnya
+- Tabel dan Chart (Garis dan Batang)
+- Formulir autentikasi dan elemen input
+- Alert, Dropdown, Modal, Tombol dan lainnya
+- Jangan lupa Mode Gelap 🕶️
 
-Sampai saat ini, kami telah berhasil mengimplementasikan:
+Semua komponen dibangun dengan Svelte dan di-styling menggunakan Tailwind CSS untuk kemudahan kustomisasi.
 
-1. Layout yang sama seperti TailAdmin dengan sidebar dan header
-2. Mengganti semua placeholder icon dengan komponen Flowbite Svelte Icons yang sesuai
-3. Membuat beberapa halaman yang ada di menu navigasi:
-   - Dashboard (halaman utama)
-   - Calendar
-   - User Profile
-   - Form Elements
-   - Basic Tables
-   - Blank Page
-   - Error 404
-   - Line Chart
-4. Mengimplementasikan komponen UI tambahan seperti chart dan tabel yang dapat disortir
+## Perbandingan Fitur
 
-## Konfirmasi Fungsionalitas
+### Versi Gratis
 
-Implementasi saat ini sudah berhasil:
-- Menampilkan layout dashboard lengkap dengan sidebar dan header
-- Menampilkan halaman dashboard utama dengan komponen dasar
-- Mendukung desain responsif
-- Memiliki struktur yang dapat diperluas untuk komponen tambahan
-- Menggunakan Flowbite Svelte Icons yang sesuai
+- 1 Dashboard Unik
+- 30+ komponen dashboard
+- 50+ elemen UI
+- File desain Figma dasar
+- Dukungan komunitas
 
-Aplikasi dapat dibangun dan dijalankan dengan benar menggunakan perintah SvelteKit standar.
+### Versi Pro
 
-## Langkah Selanjutnya
+- 5 Dashboard Unik: Analytics, Ecommerce, Marketing, CRM, Stocks (dan lainnya akan segera hadir)
+- 400+ komponen dashboard dan elemen UI
+- File desain Figma lengkap
+- Dukungan email
 
-Untuk menyelesaikan konversi penuh TailAdmin ke SvelteKit:
-1. Membuat halaman-halaman yang tersisa di menu navigasi
-2. Mengimplementasikan komponen UI tambahan seperti alert, avatar, badge, buttons, images, videos
-3. Mengimplementasikan halaman autentikasi (Sign In/Sign Up)
-4. Menghubungkan dengan data yang sebenarnya melalui API atau sumber data lainnya
+Untuk mempelajari lebih lanjut tentang fitur dan harga versi pro, kunjungi [halaman harga](https://tailadmin.com/pricing) kami.
+
+## Lisensi
+
+TailAdmin SvelteKit Versi Gratis dirilis di bawah Lisensi MIT.
+
+## Dukungan
+
+Jika Anda merasa proyek ini membantu, pertimbangkan untuk memberikannya bintang di GitHub. Dukungan Anda membantu kami terus mengembangkan dan memelihara template ini.

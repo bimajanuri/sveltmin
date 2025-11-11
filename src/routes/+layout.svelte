@@ -1,17 +1,23 @@
 <script lang="ts">
-  import Header from '$lib/components/Header.svelte';
-  import Sidebar from '$lib/components/Sidebar.svelte';
-  import '../app.css';
+  import { isSidebarOpen } from '$lib/stores';
+  import Header from '$lib/layout/Header.svelte';
+  import Sidebar from '$lib/layout/Sidebar.svelte';
+  import Backdrop from '$lib/layout/Backdrop.svelte';
 </script>
 
-<div class="flex h-screen overflow-hidden">
-  <Sidebar />
-  <div class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
+<div class="min-h-screen xl:flex">
+  <div>
+    <Sidebar />
+    <Backdrop />
+  </div>
+  <div
+    class={`flex-1 transition-all duration-300 ease-in-out ${
+      $isSidebarOpen ? "lg:ml-[290px]" : "lg:ml-[90px]"
+    }`}
+  >
     <Header />
-    <main>
-      <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-        <slot />
-      </div>
-    </main>
+    <div class="p-4 mx-auto max-w-(--breakpoint-2xl) md:p-6">
+      <slot />
+    </div>
   </div>
 </div>

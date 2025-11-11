@@ -1,14 +1,22 @@
 <script lang="ts">
-  import { FileOutline } from 'flowbite-svelte-icons';
+  import PageBreadcrumb from '$lib/components/common/PageBreadCrumb.svelte';
+  import PageMeta from '$lib/components/common/PageMeta.svelte';
 </script>
 
-<div class="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] md:p-6">
-  <div class="flex items-center gap-3 mb-6">
-    <FileOutline class="size-8 text-gray-800 dark:text-white" />
-    <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Blank Page</h1>
-  </div>
-  
-  <div class="rounded-lg bg-gray-100 dark:bg-gray-800 h-96 flex items-center justify-center">
-    <p class="text-gray-500 dark:text-gray-400">This is a blank page. Start adding your content here.</p>
+<PageMeta
+  title="SvelteKit Blank Dashboard | TailAdmin - SvelteKit Admin Dashboard Template"
+  description="This is SvelteKit Blank Dashboard page for TailAdmin - SvelteKit Tailwind CSS Admin Dashboard Template"
+/>
+<PageBreadcrumb pageTitle="Blank Page" />
+<div class="min-h-screen rounded-2xl border border-gray-200 bg-white px-5 py-7 dark:border-gray-800 dark:bg-white/[0.03] xl:px-10 xl:py-12">
+  <div class="mx-auto w-full max-w-[630px] text-center">
+    <h3 class="mb-4 font-semibold text-gray-800 text-theme-xl dark:text-white/90 sm:text-2xl">
+      Card Title Here
+    </h3>
+
+    <p class="text-sm text-gray-500 dark:text-gray-400 sm:text-base">
+      Start putting content on grids or panels, you can also use different
+      combinations of grids.Please check out the dashboard and other pages
+    </p>
   </div>
 </div>
